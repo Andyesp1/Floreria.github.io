@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferretería El Fénix</title>
+    <style>
+        /* Estilos CSS aquí */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .marquee {
+            background-color: #444;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .nav a:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .map-container {
+            width: 100%;
+            height: 400px; /* Ajusta la altura del mapa según sea necesario */
+            margin-top: 20px;
+            visibility: hidden; /* Inicialmente oculto */
+            transition: visibility 0.3s ease; /* Transición suave */
+        }
+        .map-container.visible {
+            visibility: visible; /* Visible cuando tiene la clase 'visible' */
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .servicios {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .servicio {
+            width: calc(50% - 20px); /* 50% del ancho, menos el espacio del margen */
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .servicio img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .servicio {
+                width: 100%; /* En pantallas pequeñas, ocupar todo el ancho */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ferretería El Fénix</h1>
+        </header>
+        
+        <div class="marquee">
+            <marquee behavior="scroll" direction="left">¡Grandes ofertas en herramientas eléctricas esta semana!</marquee>
+        </div>
+
+        <div class="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#ubicacion">Ubicación</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        
+        <div class="content">
+            <h2>¡Bienvenido a Ferretería El Fénix!</h2>
+            <p>Somos una ferretería comprometida con la calidad y la satisfacción del cliente, ubicada estratégicamente en Nogales, Sonora. Desde nuestro inicio, nos hemos enfocado en ofrecer productos de ferretería de primera calidad y un servicio excepcional.</p>
+            
+            <h3>Nuestra Misión</h3>
+            <p>Nuestra misión es proporcionar a nuestros clientes las mejores soluciones en ferretería, ofreciendo productos confiables y servicios profesionales que superen sus expectativas.</p>
+            
+            <h3>Nuestra Visión</h3>
+            <p>Queremos ser reconocidos como la ferretería de referencia en Nogales, destacando por nuestra integridad, compromiso con la comunidad y excelencia en el servicio al cliente.</p>
+            
+            <h3>Valores</h3>
+            <ul>
+                <li>Calidad: Nos esforzamos por ofrecer productos de alta calidad que cumplan con los estándares más exigentes.</li>
+                <li>Servicio al cliente: Priorizamos la satisfacción del cliente, brindando asesoría experta y soluciones eficaces.</li>
+                <li>Integridad: Actuamos con honestidad y transparencia en todas nuestras operaciones.</li>
+                <li>Compromiso: Estamos comprometidos con el desarrollo sostenible y el bienestar de nuestra comunidad.</li>
+            </ul>
+            
+            <h3>Servicios</h3>
+            <p>Ofrecemos una amplia gama de productos y servicios, incluyendo:</p>
+            <ul>
+                <li>Herramientas manuales y eléctricas</li>
+                <li>Materiales de construcción</li>
+                <li>Pinturas y acabados</li>
+                <li>Ferretería en general</li>
+            </ul>
+            
+            <h3>Ferretería el Fénix</h3>
+            <a href="https://www.example.com">
+                <img src="C:\Users\laea0\OneDrive\Documentos\Andy School\ModAgui\Proyecto Final\imgyram\ferreteria" alt="Productos de ferretería" width="200">
+            </a>
+            <a href="https://www.example.com">
+                <img src="https://media.giphy.com/media/LmNwrBhejkK9EFP504/giphy.gif" alt="GIF de ferretería" width="200">
+            </a>
+            
+            <h2 id="ubicacion">Ubicación</h2>
+            <p>Visítanos en:</p>
+            <p>Calle Reforma #375, colonia Del Rosario, C.P. 84020, Nogales, Sonora, México</p><br>
+
+            <button onclick="toggleMap()">Mostrar/ocultar mapa</button><br>
+            
+            <div class="map-container" id="mapContainer">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3220.713112874408!2d-110.96556368467575!3d29.085850182475904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d9488b4b5487fd%3A0x19f5b82e8a9a8e2a!2sCalle%20Reforma%20375%2C%20Del%20Rosario%2C%2084020%20Nogales%2C%20Son.!5e0!3m2!1ses!2smx!4v1623829789831!5m2!1ses!2smx" 
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                </iframe>
+            </div>
+            
+            <h2 id="contacto">Contacto</h2>
+            <p>Para más información, contáctenos al teléfono: <a href="tel:6313124024">631-312-4024</a></p>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; Dominguez Leyva Yram | 4A Programación Matutino | Última actualización: 16 de junio de 2024</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMap() {
+            var mapContainer = document.getElementById('mapContainer');
+            mapContainer.classList.toggle('visible');
+        }
+    </script>
+</body>
+</html>
